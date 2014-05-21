@@ -2,6 +2,7 @@
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 
+<%@ Register Assembly="DayPilot" Namespace="DayPilot.Web.Ui" TagPrefix="DayPilot" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -36,7 +37,7 @@
              </asp:ImageMap>
        
         
-            <asp:Button ID="Button1" runat="server" Text="Confirm" />
+          
         
         
     </div>

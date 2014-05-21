@@ -9,7 +9,7 @@
 
 
 
-public partial class CCPTest {
+public partial class dummylogin {
     
     /// <summary>
     /// form1 control.
@@ -21,11 +21,29 @@ public partial class CCPTest {
     protected global::System.Web.UI.HtmlControls.HtmlForm form1;
     
     /// <summary>
-    /// ImageMap1 control.
+    /// usernametb control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.ImageMap ImageMap1;
+    protected global::System.Web.UI.WebControls.TextBox usernametb;
+    
+    /// <summary>
+    /// passwordtb control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.TextBox passwordtb;
+    
+    /// <summary>
+    /// loginbtn control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Button loginbtn;
 }
