@@ -5,15 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-    public partial class dummylogin : System.Web.UI.Page
+namespace Cloud9Project
+{
+    public partial class Layout : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
-        protected void loginbtn_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("CCPTest.aspx");
-        }
     }
+}

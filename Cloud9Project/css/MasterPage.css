@@ -1,0 +1,41 @@
+﻿      body
+        {
+        background-color:#F8F8F8;
+        font-family:'Segoe UI Light';
+      
+              
+        }
+
+    
+#headerTitle
+{
+text-align:center;
+font-size:30px;
+color:navy;
+}
+
+  #headertop {
+        height:70px;
+        background-color:#3366FF;
+      
+        }
+
+       #homebutton
+        {
+        text-decoration:none;
+        color:white;
+        font-weight:bold;
+        font-size:30px;
+        }
+
+               #middle
+        {
+margin:0 auto;
+  background-color:white;
+  height:630px;
+  width:1100px;
+  border-left:1px dashed gray;
+   border-right:1px dashed gray;
+ 
+
+        }

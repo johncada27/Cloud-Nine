@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using System.Data;
 
 using MySql.Data.MySqlClient;
+using System.Collections;
 
 
 
@@ -27,11 +28,15 @@ using MySql.Data.MySqlClient;
         protected void Page_Load(object sender, EventArgs e)
         
        {
-           
+           TotalImage.Text = images.Length.ToString();
            if (!IsPostBack) {
                ImageMap1.ImageUrl = images[0];
                Session["authCheck"] = null;
                Session["i"] = null;
+
+            
+            
+           
            }
                if (Session["authCheck"] == null)
                {
@@ -41,9 +46,7 @@ using MySql.Data.MySqlClient;
                {
                    Session["i"] = 0;
                }
-              
 
-           
         }
 
         protected void ImageMap1_Click(object sender, ImageMapEventArgs e)
@@ -61,19 +64,30 @@ using MySql.Data.MySqlClient;
 
 
             if ((int)Session["i"] < images.Length)
+            {
                 ImageMap1.ImageUrl = images[(int)Session["i"]];
+                   int imageNo1 = (int)Session["i"] + 1;
+                   NumberImage.Text = imageNo1.ToString();
+                
+            }
             else
                 if ((int)Session["authCheck"] == images.Length)
                 {
+
+
+
+
                     ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('Success!');", true);
-                     
+
+
+
                 }
 
                 else
                 {
                     ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('Failure!');", true);
-                    
-                   
+
+
                 }
 
            

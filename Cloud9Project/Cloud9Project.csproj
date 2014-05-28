@@ -69,25 +69,52 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CCPTest.aspx" />
+    <Content Include="css\MasterPage.css" />
     <Content Include="dummylogin.aspx" />
+    <Content Include="dummylogin2.aspx" />
     <Content Include="HelloWorld.aspx" />
+    <Content Include="Images\C9Logo2.png" />
     <Content Include="Images\Ferrari.jpg" />
     <Content Include="Images\fuji.jpg" />
     <Content Include="Images\Girl Logo.jpg" />
     <Content Include="Images\LesPaul.jpg" />
     <Content Include="Images\Onizuka.jpg" />
+
     <Content Include="Login.aspx" />
+
+    <Content Include="js\jquery-1.9.1.js" />
+    <Content Include="js\jquery-ui-1.10.3.custom.js" />
+    <Content Include="Layout.aspx" />
+
     <Content Include="Scripts\modal.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+      <Compile Include="Login.aspx.designer.cs">
+        <DependentUpon>Login.aspx</DependentUpon>
+      </Compile>
+    <Compile Include="dummylogin2.aspx.cs">
+      <DependentUpon>dummylogin2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dummylogin2.aspx.designer.cs">
+      <DependentUpon>dummylogin2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Layout.aspx.cs">
+      <DependentUpon>Layout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layout.aspx.designer.cs">
+      <DependentUpon>Layout.aspx</DependentUpon>
+
     </Compile>
     <Compile Include="Old_App_Code\test.cs" />
     <Compile Include="Old_App_Code\Modal.cs" />
