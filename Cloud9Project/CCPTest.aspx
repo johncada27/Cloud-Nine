@@ -14,17 +14,7 @@
 
 
 
-        #middle
-        {
-margin:0 auto;
-  background-color:white;
-  height:630px;
-  width:900px;
-  border-left:1px dashed gray;
-   border-right:1px dashed gray;
- 
 
-        }
 
 
 
@@ -50,13 +40,7 @@ margin:0 auto;
       
         }
 
-        #homebutton
-        {
-        text-decoration:none;
-        color:white;
-        font-weight:bold;
-        font-size:30px;
-        }
+   
     
     </style>
 
@@ -68,7 +52,7 @@ margin:0 auto;
     <form id="form1" runat="server">
   
     <div id="headertop">
-        THIS IS A HEADER
+        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/C9Logo2.png" Height="90px" Width="90px" /> 
     </div>
   
 
