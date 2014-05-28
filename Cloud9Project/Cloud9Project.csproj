@@ -71,7 +71,6 @@
     <Content Include="CCPTest.aspx" />
     <Content Include="css\MasterPage.css" />
     <Content Include="dummylogin.aspx" />
-    <Content Include="dummylogin2.aspx" />
     <Content Include="HelloWorld.aspx" />
     <Content Include="Images\C9Logo2.png" />
     <Content Include="Images\Ferrari.jpg" />
@@ -94,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
 
+
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -101,13 +101,8 @@
       <Compile Include="Login.aspx.designer.cs">
         <DependentUpon>Login.aspx</DependentUpon>
       </Compile>
-    <Compile Include="dummylogin2.aspx.cs">
-      <DependentUpon>dummylogin2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="dummylogin2.aspx.designer.cs">
-      <DependentUpon>dummylogin2.aspx</DependentUpon>
-    </Compile>
+ 
+
     <Compile Include="Layout.aspx.cs">
       <DependentUpon>Layout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
