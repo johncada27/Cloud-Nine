@@ -1,0 +1,21 @@
+﻿      body
+        {
+        background-color:white;
+        font-family:'Segoe UI Light';
+      
+              
+        }
+
+    
+#headerTitle
+{
+text-align:center;
+font-size:30px;
+color:navy;
+}
+
+  #headertop {
+        height:70px;
+        background-color:navy;
+        border:1px solid black;
+        }

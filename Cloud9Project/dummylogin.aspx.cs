@@ -11,4 +11,9 @@ using System.Web.UI.WebControls;
         {
 
         }
+
+        protected void loginbtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CCPTest.aspx");
+        }
     }
