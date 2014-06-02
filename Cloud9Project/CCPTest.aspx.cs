@@ -7,11 +7,9 @@ using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
-
 using MySql.Data.MySqlClient;
 using System.Collections;
-
-
+using System.Diagnostics;
 
 
 
@@ -24,7 +22,12 @@ using System.Collections;
        
         String[] images = { "Images/Ferrari.jpg","Images/fuji.jpg", "Images/LesPaul.jpg" };
         int i;
-     
+
+      //  Stopwatch sw = new Stopwatch();
+        
+        DateTime dtStart;
+        DateTime dtEnd;
+
         protected void Page_Load(object sender, EventArgs e)
         
        {
@@ -56,12 +59,20 @@ using System.Collections;
             {
                 Session["authCheck"] = (int)Session["authCheck"] + 1;
 
+                //sw.Start();
+                //string now1 = string.Format("{0:HH:mm:ss tt}", DateTime.Now);
+                if(Session["clickstart"]== null)
+                {
+                dtStart = DateTime.Now;
+                Session["clickstart"] = dtStart;
+                }
+           
 
-
+                
             }
             Session["i"] = (int)Session["i"] + 1;
 
-
+          
 
             if ((int)Session["i"] < images.Length)
             {
@@ -75,9 +86,21 @@ using System.Collections;
                 {
 
 
+                    //sw.Stop();
+                    //TimeSpan ts = sw.Elapsed;
+                    //string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",ts.Hours, ts.Minutes, ts.Seconds,ts.Milliseconds / 10);
+                    // TimeSpan span = DateTime.Now.Subtract(dtStart);
+                    // int elapsedtime = Convert.ToInt32(span.TotalSeconds);
+
+                    dtEnd = DateTime.Now;
+                    DateTime dtStart = Convert.ToDateTime(Session["clickstart"]);
+                    double tsDifference = (dtEnd - dtStart).TotalSeconds;
+                    double TimeTick = DateTime.Now.Ticks - dtStart.Ticks;
 
 
-                    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('Success!');", true);
+                    Session["clickstart"] = null;
+                    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('Success!  You have used  " + tsDifference + " seconds, " + TimeTick + " ticks');", true);
+       
 
 
 
@@ -85,6 +108,7 @@ using System.Collections;
 
                 else
                 {
+                    Session["clickstart"] = null;
                     ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('Failure!');", true);
 
 
